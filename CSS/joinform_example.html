@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 예제</title>
+    <link rel="stylesheet" href="./css_folder/joinform.css">
+</head>
+<body>
+    <div class="side1">
+
+    </div>
+    <div class="side2">
+        <h1>회원가입</h1>
+        <br>
+        <form action="" method="post">
+            <!-- 필수정보 양식 ---------------------------------------------------------------------->
+            <fieldset style="width: 400px;">
+                <legend>필수 정보</legend>
+                <table>
+                    <tr>
+                        <td style="width: 150px;">아이디</td>
+                        <td style="width: 200px;">
+                            <input type="text" name="id" class="input_required" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>패스워드</td>
+                        <td>
+                            <input type="password" name="password" class="input_required" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>패스워드 확인</td>
+                        <td>
+                            <input type="password" name="passwordCheck" class="input_required" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>이메일</td>
+                        <td>
+                            <input type="email" name="email" class="input_required" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>핸드폰</td>
+                        <td>
+                            <input type="tel" name="phone" class="input_required" required>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <!-- 필수정보 양식 끝 ------------------------------------------------------------------->
+
+            <!-- 선택정보 양식 ---------------------------------------------------------------------->
+            <fieldset style="width:400px;">
+                <legend>선택정보</legend>
+                <table>
+                    <tr>
+                        <td style="width: 150px;">생년월일</td>
+                        <td style="width: 200px;">
+                            <input type="date" name="date" class="input_required" id="aaa">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>MBTI</td>
+                        <td>
+                            <select name="mbti" class="input_required">
+                                <option value="ISTJ">ISTJ</option>
+                                <option value="ENFJ">ENFJ</option>
+                                <option value="ENTP">ENTP</option>
+                                <option value="ISFJ">ISFJ</option>
+                                <option value="INFT">INFT</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>관심분야</td>
+                        <td>
+                            <label><input type="checkbox" name="interest" value="일본어"> 일본어</label>
+                            <label><input type="checkbox" name="interest" value="IT"> IT</label>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <!-- 선택정보 양식 끝 -------------------------------------------------------------------->
+            <br><input type="submit" class="btn" value="가입">
+            <input type="reset" class="btn" value="취소">
+        </form>
+    </div>
+</body>
+</html>

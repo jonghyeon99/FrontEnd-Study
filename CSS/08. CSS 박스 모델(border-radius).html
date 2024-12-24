@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            border-radius : 테두리를 둥글게 처리
+            top-left, top-right, bottom-right, bottom-left
+        */
+        div {
+            border: 5px solid black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+
+        /* 네 모서리 모두 */
+        .box1 {
+            border-radius: 20px;
+        }
+        .box2 {
+            border-radius: 10%;
+        }
+        .box3 {
+            border-radius: 10px 30px;
+            /*
+            첫 번째 : top-left, bottom-right
+            두 번째 : top-right, bottom-left
+            */
+        }
+        .box4 {
+            border-radius: 10px 20px 30px;
+            /*
+            첫 번째 : top-left
+            두 번째 : top-right, bottom-left
+            세 번째 : bottom-right
+            */
+        }
+        .box5 {
+            border-radius: 10px 20px 30px 40px;
+            /*
+            첫 번째 : top-left
+            두 번째 : top-right
+            세 번째 : bottom-right
+            네 번째 : bottom-left
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+    <div class="box4">box4</div>
+    <div class="box5">box5</div>
+</body>
+</html>

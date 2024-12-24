@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 800px;
+            border: 1px solid red;
+            margin: auto; /* 중앙 정렬 */
+        }
+        header {
+            background-color: skyblue;
+            overflow: hidden;
+        }
+        header article {
+            background-color: lightcoral;
+            width: 200px;
+            height: 100px;
+        }
+        .logo {
+            float: left;
+        }
+        .navi {
+            float: right;
+        }
+        section.box1 {
+            background-color: yellow;
+            height: 300px;
+        }
+        .box2 article {
+            width: 33.3%;
+            height: 150px;
+            float: left;
+        }
+        #sub1 {
+            background-color: lightsalmon;
+        }
+        #sub2 {
+            background-color: lightgreen;
+        }
+        #sub3 {
+            background-color: lightpink;
+        }
+        footer {
+            background-color: aquamarine;
+            height: 100px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <article class="logo">logo</article>
+            <article class="navi">navi</article>
+        </header>
+        <section class="box1">box1</section>
+        <section class="box2">
+            <article id="sub1">sub1</article>
+            <article id="sub2">sub2</article>
+            <article id="sub3">sub3</article>
+        </section>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>

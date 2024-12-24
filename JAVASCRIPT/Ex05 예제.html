@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let userid = document.querySelector('#userid');
+            let userpw = document.querySelector('#userpw');
+            let checkpw = document.querySelector('#checkpw');
+
+            userid.addEventListener('keyup', function() {
+                if (userid.value.length >= 8) {
+                    userid.style.backgroundColor = 'lightblue';
+                } else {
+                    userid.style.backgroundColor = 'lightpink';
+                }
+            });
+
+            checkpw.addEventListener('keyup', function() {
+                if (userpw.value == checkpw.value) {
+                    checkpw.style.backgroundColor = 'lightblue';
+                } else {
+                    checkpw.style.backgroundColor = 'lightpink';
+                }
+            });
+        }
+        function formCheck() {
+            let userid = document.querySelector('#userid');
+            let userpw = document.querySelector('#userpw');
+            let checkpw = document.querySelector('#checkpw');
+            
+            if (userid.value.length < 8) {
+                alert('아이디는 8자 이상');
+                return false;
+            }
+
+            if (userpw.value == null || checkpw.value == null 
+                || userpw.value == '' || checkpw.value == ''
+                || userpw.value != checkpw.value) {
+                alert('패스워드가 일치하지 않습니다.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+    </style>
+</head>
+<body>
+    <!--
+        HTML 태그 만들기
+        아이디가 8자 미만 배경색이 빨강
+        아이디가 8자 이상 배경색이 파랑
+        비밀번호 확인 일치하지 않으면 빨강, 일치하면 파랑
+        가입버튼을 눌렀을 때
+        아이디가 8자 미만이거나 비밀번호가 일치하지 않으면 폼 데이터 전송 false
+        form 태그 onsubmit="return 함수명()"
+    -->
+    <h1>회원 가입</h1>
+    <table>
+        <form action="" method="get" onsubmit="return formCheck()">
+            <tr>
+                <td><p>아이디</p></td>
+                <td><input type="text" id="userid" name="userid" placeholder="아아디는 8자 이상"></td>
+            </tr>
+            <tr>
+                <td><p>패스워드</p></td>
+                <td><input type="password" name="userpw" id="userpw"></td>
+            </tr>
+            <tr>
+                <td><p>패스워드확인</p></td>
+                <td><input type="password"id="checkpw"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" value="가입" class="btn">
+                    <input type="reset" value="취소" class="btn">
+                </td>
+            </tr>
+        </form>
+    </table>
+    <!--
+    onSubmit
+    '양식 제출 이벤트가 발생할 때의 동작을 지정한다.'
+
+    form 태그 내부에서 <input type='submit'>로 인해 발생하는 이벤트를 처리할 수 있다.
+    이벤트 발생과 action에 지정된 URL이 적용되는 그 사이의 시점에 처리할 동작을 이 onSubmit 속성을 통해 지정할 수 있는 것이다.
+    일반적으로 자바스크립트 함수를 지정하여 처리하는 경우가 많다.
+    연결된 함수에서 true를 반환하면 form이 전송되고, false를 반환한다면 form이 전송되지 않음.
+    false가 반환되면 이벤트 처리를 그대로 강제 종료 시키기 때문에 action이 처리되는 일은 일어나지 않는다.
+
+    submit이 되지 않도록 막아두는 방법으로는 onSubmit='return false' 이다.
+    -->
+</body>
+</html>

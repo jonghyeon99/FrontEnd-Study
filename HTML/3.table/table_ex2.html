@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 예제2</title>
+    <style>
+        table, td {
+            border : 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td colspan="4" style="background-color: #f1a8bc;">1</td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" style="width: 100px; height: 100px; background-color: #addbd8;">5</td>
+            <td style="background-color: #eee58a;">7</td>
+            <td style="background-color: #d6b0eb">8</td>
+        </tr>
+        <tr>
+            <td style="background-color: #c4ecb0">11</td>
+            <td style="background-color: #ffa970">12</td>
+        </tr>
+        <tr>
+            <td colspan="2" style="background-color: #7d9dcd">13</td>
+            <td colspan="2" style="background-color: #aacd67">15</td>
+        </tr>
+    </table>
+</body>
+</html>

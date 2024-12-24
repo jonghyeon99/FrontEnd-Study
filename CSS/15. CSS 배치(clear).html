@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            float 속성의 특징
+             - 요소가 왼쪽이나 오른쪽으로 떠서 배치되지만,
+               다음에 오는 블럭 요소들이 예상치 않은 위치에 배치 될 수 있음
+        */
+        .container {
+            border: 5px solid red;
+            width: 600px;
+        }
+        .top {
+            background-color: cyan;
+            width: 600px;
+            height: 50px;
+            float: top;
+        }
+        .left {
+            background-color: rgb(198, 93, 230);
+            width: 400px;
+            height: 100px;
+            float: left;
+        }
+        .right {
+            background-color: rgb(107, 210, 89);
+            width: 200px;
+            height: 100px;
+            float: right;
+        }
+        .bottom {
+            background-color: rgb(214, 75, 119);
+            height: 50px;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">float: none</div>
+        <div class="left">float: left</div>
+        <div class="right">float: right</div>
+        <div class="bottom">float: clear</div>
+    </div>
+</body>
+</html>
