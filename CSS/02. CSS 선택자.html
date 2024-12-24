@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 선택자 - 모든 요소에 스타일 적용 */
+        *{
+            font-size: 25px;
+            /* 글자간의 행 간격 */
+            line-height: 35px;
+        }
+
+        /* 태그 선택자 - 특정 태그를 사용한 요소에 스타일 적용 */
+        p{
+            /*
+                text-align
+                CSS에서 텍스트의 가로정렬을 지정하는데 사용
+                이 속성은 블록 레벨 요소나 인라인 블록 요소에 적용되어
+                텍스트를 좌측, 우측, 중앙, 양쪽 정렬할 수 있음
+                left | right | center | justify ...
+            */
+
+            text-align: center;
+            color: red;
+        }
+
+        /* 아이디 선택지 - 특정 부분에 스타일 적용 */
+        #center{
+            text-align: left;
+            color: lightblue;
+        }
+
+        /* 클래스 선택자 - 특정 부분에 스타일 적용 */
+        .center{
+            text-align: right;
+            color: lightcoral;
+        }
+
+        p.center{/*우선순위 높음*/
+            text-align: right;
+            color: lightseagreen;
+        }
+
+        /* 그룹 선택자 - 둘 이상 요소에 같은 스타일 적용 */
+        p, h1{
+            color: blue;
+        }
+
+        /* 자손(자식, 손자 포함), 하위 요서 선택자 */
+        p b{
+            color: hotpink;
+        }
+
+        /* 속성 선택자 */
+        input[type="text"]{
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        동해물과 백두산이 <b>마르고 닳도록</b>
+        <span><b>하나님</b>이 보우하사</span>
+        우리나라 만세
+    </p>
+    <p id="center">HTML은 재밌다</p>
+    <p class="center">CSS도 재밌다</p>
+    <div class="center">JAVASCRIPT도 재밌다</div>
+
+    <h1>프로그래밍 언어</h1>
+    <p>HTML 시험 준비</p>
+    INPUT 태그1: <input type="text" size="20"><br>
+    INPUT 태그1: <input type="password" size="20">
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table, td, th {
+            border : 1px solid black;
+            /*
+                CSS속성으로 HTML 표 요소의 셀의 경계를 처리하는 방식 지정
+                separate : 기본값, 각 셀의 경계를 분리
+                collapse : 셀의 경계를 하나로 결합
+            */
+            border-collapse: collapse;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>table</h1>
+
+    <table>
+        <!-- <tr> 테이블의 행을 만드는 태그 -->
+        <tr>
+            <!-- <td> 테이블의 열을 만드는 태그-->
+            <td>표의 셀1</td>
+            <td>표의 셀2</td>
+            <td>표의 셀3</td>
+        </tr>
+        <tr>
+            <td>표의 셀4</td>
+            <td>표의 셀5</td>
+            <td>표의 셀6</td>
+        </tr>
+    </table>
+
+    <table>
+        <!-- 표의 제목을 만드는 태그 -->
+        <caption>표의 제목</caption>
+        <tr>
+            <!-- 쉘의 제목을 만드는 태그 -->
+            <th>이름</th>
+            <th>나이</th>
+            <th>핸드폰</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>30</td>
+            <td>010-1111-2222</td>
+        </tr>
+        <tr>
+            <td>이순신</td>
+            <td>29</td>
+            <td>010-2222-3333</td> 
+        </tr>
+    </table>
+
+    <table>
+        <!-- 표의 제목을 만드는 태그 -->
+        <caption>전화번호부</caption>
+        <tr>
+            <!-- 쉘의 제목을 만드는 태그 -->
+            <th colspan="2">이름</th>   <!-- colspan : 가로 확장 -->
+            <th>나이</th>
+            <th>핸드폰</th>
+        </tr>
+        <tr>
+            <td rowspan="2">홍</td>     <!-- rowspan : 세로 확장 -->
+            <td rowspan="2">길동</td>
+            <td rowspan="2">30</td>
+            <td>010-1111-2222</td>
+        </tr>
+        <tr>
+            <td>010-3333-4444</td>
+        </tr>
+        <tr>
+            <td>이</td>
+            <td>순신</td>
+            <td>29</td>
+            <td>010-2222-3333</td> 
+        </tr>
+    </table>
+</body>
+</html>

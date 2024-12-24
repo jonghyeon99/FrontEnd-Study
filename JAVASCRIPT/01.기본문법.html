@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 한 줄 주석
+        /*
+            여러 줄 주석
+        */
+
+        // 데이터 타입
+        /*
+            1. Number       // 기본형
+            2. String       // 기본형
+            3. Undefined   // 기본형
+            4. Null         // 참조형
+            5. Boolean      // 기본형
+            6. Object       // 참조형
+                객체, 함수, 배열 ...
+        */
+
+        // 변수
+        var a = 10;
+        a = 1.2;
+        var b = 'hello';
+        let c = 20;     // 동일한 이름의 변수명 재선언 불가능, 재할당은 가능
+        // let c = 'ㅎㅎ'; 
+        const d = true; // 값의 재할당을 할 수 없는 상수
+        
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        console.log(d);
+
+        let point = 123;
+        console.log(point);
+        console.log(typeof point);
+        point = -1.23;
+        console.log(typeof point);
+
+        point = 1 * 'A';
+        // NaN : Not a Number
+        console.log(point);
+        console.log('Nan: ' + typeof NaN);
+
+        // 문자열
+        // JS에서는 문자와 문자열을 구분하지 않는다
+        // '', ""
+        let str = '칼국수';
+        let str2 = str;
+        str = "쌀국수";
+        console.log(str);
+        console.log(str2);
+        console.log(typeof str);    //string
+        console.log(typeof str2);   //string
+
+        // Boolean
+        let result = true;
+        result = false;
+        console.log(result);
+
+        // Object : { name : value } 형태
+        let book = {
+            title: '책',
+            point: 123
+        };
+        console.log(book);
+        console.log(typeof book);
+
+        // undefined
+        // 변수가 선언되었지만 아직 값이 할당되지 않았을 때의 기본 값
+        let e;
+        console.log(e);
+
+        // null
+        // 값이 없는 상태
+        // 변수나 객체 속성이 빈 값임을 명시적으로 나타낼 때 사용
+        e = null;
+        console.log(e);
+
+        console.log('----------');
+        /*
+            undefined vs null
+            == 연산자 : null과 undefined는 동등 연산자(==)로 비교할 때 같음
+                        두 값이 모두 "비어 있음"을 나타내기 때문
+            === 연산자: 일치 연산자(===)는 값과 타입 모두를 비교
+                        null과 undefined는 같지 않음
+        */
+        console.log(null == undefined);     // true
+        console.log(null === undefined);    // false
+        console.log(typeof undefined);      // undefined
+        console.log(typeof null);           // object
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

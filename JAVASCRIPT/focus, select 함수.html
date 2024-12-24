@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btn = document.querySelector('#btn');
+            btn.addEventListener('click', function() {
+                let inputTag = document.querySelector('#inputTag');
+                let result = document.querySelector('#result');
+
+                if (inputTag.value.trim().length == 0   // trim() : 공백지우기
+                    || isNaN(inputTag.value)) {
+                        inputTag.focus();   // 커서이동
+                        inputTag.select();  // 데이터 모두 선택
+                        return;
+                }
+
+                result.innerHTML = inputTag.value;
+            });
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="inputTag">
+    <input type="button" value="확인" id="btn">
+    <div id="result"></div>
+</body>
+</html>

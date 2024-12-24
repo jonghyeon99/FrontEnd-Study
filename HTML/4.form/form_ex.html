@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 예제</title>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset style="width: 300px;">
+            <legend>회원가입</legend>
+            <label for="id">아이디 : <br></label>
+            <input type="text" name="id" id="id"><br>
+            <label for="pw">패스워드 : <br></label>
+            <input type="password" name="password" id="pw"><br> 
+            <label for="email">이메일 : <br></label>
+            <input type="email" name="email" id="email"><br>
+        </fieldset>
+
+        <fieldset style="width: 300px;">
+            <legend>과목</legend>
+            <label for="HTML">HTML</label>
+            <input type="checkbox" name="subject" id="HTML" value="HTML">
+            <label for="CSS">CSS</label>
+            <input type="checkbox" name="subject" id="CSS" value="CSS">
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" name="subject" id="JavaScript" value="JavaScript">
+            <br><br>
+            <label for="upper">상</label>
+            <input type="radio" name="grade" id="upper" value="상">
+            <label for="middle">중</label>
+            <input type="radio" name="grade" id="middle" value="중">
+            <label for="lower">하</label>
+            <input type="radio" name="grade" id="lower" value="하">
+            <br><br>
+        </fieldset>
+
+        <fieldset style="width: 300px;">
+            <legend>날짜</legend>
+            <label for="date">날짜</label>
+            <input type="date" name = "date" id="date"><br>
+        </fieldset>
+        <input type="submit" value="전송하기">
+        <input type="reset" value="취소하기">
+    </form>
+    
+</body>
+</html>
+
+<!-- 
+    ?id=hong
+    &password=112132
+    &subject=HTML&subject=CSS
+    &grade=상
+-->
